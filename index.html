@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="container">
+        <h1>
+            <a href="index.php" target="_top"><img src="images/logo.png" alt="農產品比價網"></a>
+        </h1>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <ul class="classButton">
+                <li class="fw-blod"><a href="#">蔬果</a></li>
+                <li class="fw-blod"><a href="#">水果</a></li>
+                <li class="fw-blod"><a href="#">花卉</a></li>
+            </ul>
+
+            <div class="search">
+                <div class="inputGroup">
+                    <label for="search" class="fw-blod">作物名稱</label><input type="text" id="search" placeholder="請輸入作物名稱"
+                        size="27">
+                </div>
+                <div class="searchButton">
+                    <a href="#" class="fw-blod">搜尋</a>
+                </div>
+            </div>
+
+            <div class="searchItem">
+                <h2 class="fw-blod">查看「椰子」的比價結果</h2>
+                <select name="" id="">
+                    <option selected>排序篩選</option>
+                </select>
+            </div>
+
+            <div class="resultTable">
+                <table>
+                    <thead>
+                        <tr class="fw-blod">
+                            <th>作物名稱</th>
+                            <th>市場名稱</th>
+                            <th>上價</th>
+                            <th>中價</th>
+                            <th>下價</th>
+                            <th>平均價</th>
+                            <th>交易量</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="fw-blod">椰子</td>
+                            <td class="fw-blod">台北二</td>
+                            <td>10.0</td>
+                            <td>8.9</td>
+                            <td>5.0</td>
+                            <td>5.0</td>
+                            <td>30.0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $.ajax({
+            url: 'https://hexschool.github.io/js-filter-data/data.json',
+            type: 'get',
+            dataType: 'json',
+            success: function(data) {
+                console.log(data)
+            }
+        });
+
+        
+    </script>
+</body>
+
+</html>
